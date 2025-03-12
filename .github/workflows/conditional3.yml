@@ -1,13 +1,10 @@
 Commit changes:
-
 name: Conditional Workflow Execution
-
 on:
   push:
     branches:
       - main
       - feature/*
-
 jobs:
   production-deploy:
     if: startsWith(github.ref, 'refs/heads/feature/') || github.ref == 'refs/heads/main'
